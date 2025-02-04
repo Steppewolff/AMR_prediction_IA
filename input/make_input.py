@@ -20,7 +20,7 @@ for file in files:
         if row[id_name] not in output_df['strain_id']:
             new_row["strain_id"] = row[id_name]
             for field, value in row.items():
-                if field in ["FEP_MIC", "FEP_eval", "MER_MIC", "MER_eval", "IMI_MIC", "IMI_eval","AZT_MIC", "AZT_eval"]:
+                if field in ["FEP_MIC", "FEP_eval", "MER_MIC", "MER_eval", "IMI_MIC", "IMI_eval","AZT_MIC", "AZT_eval", "CIP_MIC", "CIP_eval"]:
                     new_row[field] = str(value)
                 if field[:6] in df_columns:
                     new_row[field[:6]] = str(value)
@@ -31,5 +31,5 @@ s = output_df.duplicated(subset=["strain_id"])
 output_df = output_df.assign(duplicated = s)
 print(output_df)
 print(s)
-output_df.to_csv('output.csv')
+output_df.to_csv('output.csv', ";")
 # print(output_df)
