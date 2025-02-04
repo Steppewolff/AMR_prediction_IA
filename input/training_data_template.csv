@@ -1,0 +1,3 @@
+gene1,gene2,...,gene160,IMI_MIC,AZT_MIC,FEP_MIC,IMI_eval,AZT_eval,FEP_eval,danger_profile
+"""""","""MUT1""",...,"""MUT2""",2.0,8.0,0.5,sensitive,resistant,sensitive,MDR
+"""MUT3""","""""",...,"""MUT1,MUT4""",4.0,16.0,1.0,resistant,resistant,resistant,XDR
